@@ -65,7 +65,7 @@ task fatJar(type: Jar) {
         )
 
     }
-    baseName = 'RELEASE_X'
+    project.archivesBaseName="RELEASE_X"
     from {
         //WARNING IT IS REQUIRED TO LAUNCH FROM A NON JAVAFX START :https://github.com/javafxports/openjdk-jfx/issues/236
         configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }

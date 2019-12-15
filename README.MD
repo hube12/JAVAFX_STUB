@@ -21,15 +21,15 @@
         /etc/profile... on Linux and your global Environment Variable on Windows (Computer -> Properties ->
         Advanced System Settings -> Environment Variables -> Add) and add this one: 
             * Name: PATH_TO_JFX
-            * Value: `C:\Program Files\Java\javafx-sdk-13.0.1\lib` or `/opt/javafx-sdk-13.0.1\lib`
+            * Value: `C:\Program Files\Java\javafx-sdk-13.0.1\lib` or `/opt/javafx-sdk-13.0.1/lib`
     - [Optional 3](#3): 
         - Install Intellij as you should do for every system
         - You will need to specify those options to run locally: 
             - Inside the Project Structure -> Libraries -> + menu, add either `C:\Program Files\Java\javafx-sdk-13.0.1\lib` 
-            or `/opt/javafx-sdk-13.0.1\lib`
+            or `/opt/javafx-sdk-13.0.1/lib`
             - Inside the Run -> Edit Configurations... menu you need to add one of those options: 
                 - `--module-path "C:\Program Files\Java\javafx-sdk-13.0.1\lib" --add-modules javafx.controls,javafx.fxml`
-                - `--module-path "/opt/javafx-sdk-13.0.1\lib" --add-modules javafx.controls,javafx.fxml`
+                - `--module-path "/opt/javafx-sdk-13.0.1/lib" --add-modules javafx.controls,javafx.fxml`
     - To setup Gradle simply type `gradlew`
 ---
 - RUN
