@@ -31,9 +31,9 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.5.2")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.5.2")
     /* comment to remove cross-platform jar: */
-    //runtimeOnly "org.openjfx:javafx-graphics:$javafx.version:win"
-    // runtimeOnly "org.openjfx:javafx-graphics:$javafx.version:linux"
-    //runtimeOnly "org.openjfx:javafx-graphics:$javafx.version:mac"
+    runtimeOnly "org.openjfx:javafx-graphics:$javafx.version:win"
+    runtimeOnly "org.openjfx:javafx-graphics:$javafx.version:linux"
+    runtimeOnly "org.openjfx:javafx-graphics:$javafx.version:mac"
 }
 test {
     useJUnitPlatform {
@@ -57,7 +57,7 @@ jar {
     }
 }
 
-task fatJar(type: Jar){
+task fatJar(type: Jar) {
     manifest {
         attributes('Implementation-Title': project.name,
                 'Implementation-Version': project.version,
@@ -66,10 +66,10 @@ task fatJar(type: Jar){
 
     }
     baseName = 'RELEASE_X'
-        from {
-            //WARNING IT IS REQUIRED TO LAUNCH FROM A NON JAVAFX START :https://github.com/javafxports/openjdk-jfx/issues/236
-            configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
-        }
+    from {
+        //WARNING IT IS REQUIRED TO LAUNCH FROM A NON JAVAFX START :https://github.com/javafxports/openjdk-jfx/issues/236
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
     with jar
 
 }

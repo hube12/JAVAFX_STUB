@@ -1,3 +1,4 @@
+@SuppressWarnings("module")
 module Podcast_Collector {
     requires javafx.controls;
     requires javafx.fxml;
