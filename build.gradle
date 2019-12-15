@@ -18,7 +18,7 @@ javafx {
     modules = ['javafx.controls', 'javafx.fxml']
 }
 
-mainClassName = "edu.PCD.PodcastCollector.Main"
+mainClassName = "$moduleName/edu.PCD.PodcastCollector.Main"
 
 jlink {
     options = ['--strip-debug', '--compress', '2', '--no-header-files', '--no-man-pages']
@@ -51,7 +51,7 @@ jar {
     manifest {
         attributes('Implementation-Title': project.name,
                 'Implementation-Version': project.version,
-                'Main-Class': project.getProperty('mainClassName')
+                'Main-Class': project.getProperty('mainClassName').split("/")[1]
         )
 
     }
