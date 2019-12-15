@@ -37,5 +37,5 @@
     - Via terminal, use gradle and type `gradle run`
 ---
 - JARIFY
-    - On Intellij use the gradle panel and use the Jar or fatJar option
-    - Via terminal, use gradle and type `gradle jar` or `gradle fatjar`
+    - On Intellij use the gradle panel and use the Assemble or fatJar option
+    - Via terminal, use gradle and type `gradle fatJar` (result will be in build/libs) or `gradle assemble` for a native app, results will be in build/distributions
