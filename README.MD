@@ -30,6 +30,7 @@
             - Inside the Run -> Edit Configurations... menu you need to add one of those options: 
                 - `--module-path "C:\Program Files\Java\javafx-sdk-13.0.1\lib" --add-modules javafx.controls,javafx.fxml`
                 - `--module-path "/opt/javafx-sdk-13.0.1/lib" --add-modules javafx.controls,javafx.fxml`
+        - To run gradle you need to set up the gradle jvm to 13 in Settings -> Build, Exec, Deploy -> Build tools -> Gradle
     - To setup Gradle simply type `gradlew`
 ---
 - RUN
@@ -38,4 +39,4 @@
 ---
 - JARIFY
     - On Intellij use the gradle panel and use the Assemble or fatJar option
-    - Via terminal, use gradle and type `./gradlew fatJar` (result will be in build/libs) or `./gradlew assemble` for a native app, results will be in build/distributions
+    - Via terminal, use gradle and type `./gradlew fatJar` (result will be in build/libs) or `./gradlew assemble` for a native app, results will be in build/distributions. You can also use `./gradlew runtime` to make a runtime in build/image/bin.
