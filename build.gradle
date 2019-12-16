@@ -18,7 +18,6 @@ javafx {
     modules = ['javafx.controls', 'javafx.fxml']
 }
 application{
-
     mainClassName = "edu.PCD.PodcastCollector.Main"
     applicationName="PodcastCollector"
 }
@@ -39,7 +38,6 @@ runtime {
 dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.5.2")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.5.2")
-    testCompile(':module.test')
     /* comment to remove cross-platform jar: */
     runtimeOnly "org.openjfx:javafx-graphics:$javafx.version:win"
     runtimeOnly "org.openjfx:javafx-graphics:$javafx.version:linux"
