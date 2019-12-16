@@ -33,9 +33,9 @@
     - To setup Gradle simply type `gradlew`
 ---
 - RUN
-    - On Intellij, click the nifty little green arrow
-    - Via terminal, use gradle and type `gradle run`
+    - On Intellij, click the nifty little green arrow (if you installed optionals) else use the gradle side bar and click on `Tasks->Aplication->run`
+    - Via terminal, use gradle and type `./gradlew run`
 ---
 - JARIFY
     - On Intellij use the gradle panel and use the Assemble or fatJar option
-    - Via terminal, use gradle and type `gradle fatJar` (result will be in build/libs) or `gradle assemble` for a native app, results will be in build/distributions
+    - Via terminal, use gradle and type `./gradlew fatJar` (result will be in build/libs) or `gradle assemble` for a native app, results will be in build/distributions
